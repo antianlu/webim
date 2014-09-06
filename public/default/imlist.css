@@ -1,0 +1,297 @@
+.imcontainer,
+.imcontainer ul,
+.imcontainer li,
+.imcontainer span,
+.imcontainer a,
+{
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    font-size: 12px;
+}
+
+.imcontainer {
+    width: 282px;
+    overflow: hidden
+}
+
+.imcontainer .imlistbox {
+    width: 600px;
+    position: relative;
+}
+
+.imcontainer ul.accordion {
+    width: 282px;
+    float: left;
+    font-size:12px;
+}
+
+/* Layout & Style */
+
+.imcontainer .accordion li > a {
+    display: block;
+    position: relative;
+    min-width: 110px;
+    padding: 0 10px 0 10px;
+    height: 32px;
+    line-height: 32px;
+    color:#333;
+    /*text-shadow: 1px 1px 0px rgba(0, 0, 0, .2);*/
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid transparent;
+    background-image: -moz-linear-gradient(top, rgba(255, 255, 255, .3), rgba(255, 255, 255, .6)); /* FF1.6+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, .3)), to(rgba(255, 255, 255, .6))); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, .3), rgba(255, 255, 255, .6)); /* Chrome 10+, Saf5.1+, iOS 5+ */
+    background-image: -ms-linear-gradient(top, rgba(255, 255, 255, .3), rgba(255, 255, 255, .6)); /* IE10 */
+    background-image: -o-linear-gradient(top, rgba(255, 255, 255, .1), rgba(255, 255, 255, .3)); /* Opera 11.10+ */
+    background-image: linear-gradient(top, rgba(255, 255, 255, .1), rgba(255, 255, 255, .3));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffffff, endColorstr=#ff000000, enabled=true, gradientType='1'); /* IE6–IE9 */
+}
+
+.imcontainer .accordion > li:hover > a,
+.imcontainer .accordion > li:target > a,
+.imcontainer .accordion > li > a.active {
+    color:#333;
+    font-weight:bold;
+    text-decoration: none;
+    /*background: url(../img/active.png) repeat-x;color:#FF0984*/
+    border-top: 1px solid transparent;
+    border-bottom: 1px solid rgba(255,9,132,.7);
+    background-image: -moz-linear-gradient(top, rgba(64, 159, 255, .2), rgba(64, 159, 255, .8)); /* FF1.6+ */
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(rgba(64, 159, 255, .8))); /* Saf4+, Chrome */
+    background-image: -webkit-linear-gradient(top, rgba(64, 159, 255, .2), rgba(64, 159, 255, .8)); /* Chrome 10+, Saf5.1+, iOS 5+ */
+    background-image: -ms-linear-gradient(top, rgba(64, 159, 255, .2), rgba(64, 159, 255, .8)); /* IE10 */
+    background-image: -o-linear-gradient(top, rgba(64, 159, 255, .2), rgba(64, 159, 255, .8)); /* Opera 11.10+ */
+    background-image: linear-gradient(top, rgba(64, 159, 255, .2), rgba(64, 159, 255, .8));
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#ffffffff, endColorstr=#ff000000, enabled=true, gradientType='1'); /* IE6–IE9 */
+}
+
+.imcontainer .accordion li > a span {
+    display: block;
+    position: absolute;
+    top: 7px;
+    right: 0;
+    padding: 0 10px;
+    margin-right: 20px;
+    color: #333;
+    border: 1px solid #c9c9c9;
+    font: normal bold 12px/18px Arial, sans-serif;
+    background:transparent;
+
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    border-radius: 15px;
+
+    -webkit-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .2), 1px 1px 1px rgba(255, 255, 255, .1);
+    -moz-box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .2), 1px 1px 1px rgba(255, 255, 255, .1);
+    box-shadow: inset 1px 1px 1px rgba(0, 0, 0, .2), 1px 1px 1px rgba(255, 255, 255, .1);
+}
+
+.imcontainer .accordion > li:hover > a span,
+.imcontainer .accordion > li:target > a span,
+.imcontainer .accordion > li > a.active span {
+    color: #fdfdfd;
+    /*text-shadow: 0px 1px 0px rgba(0, 0, 0, .45);*/
+    background:#666666;
+}
+
+/* Images */
+
+.imcontainer .accordion > li > a strong.arrow {
+    background:url(chat/arrow-24.png) right no-repeat;
+    height:24px;
+    width:9px;
+    border:0;
+    margin:4px 5px 0 0;
+    display:block;
+    float:left
+}
+
+/* Sub Menu */
+.imcontainer .accordion .sub-menu li
+{
+    padding-left:5px;
+}
+.imcontainer .accordion .sub-menu li > a {
+    color:#141414;
+    padding-left:40px;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, .2);
+    background: rgba(255, 255, 255, .0);
+    -webkit-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, .1), 0px 1px 0px 0px rgba(0, 0, 0, .1);
+    -moz-box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, .1), 0px 1px 0px 0px rgba(0, 0, 0, .1);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, .1), 0px 1px 0px 0px rgba(0, 0, 0, .1);
+}
+
+.imcontainer .accordion .sub-menu li:hover a {
+    border-radius:15px 0 0 15px;
+    background:rgba( 239,239,239,.8);
+    text-decoration: none;
+}
+
+.imcontainer .accordion .sub-menu li:last-child a {
+    border: none;
+}
+
+.imcontainer .accordion .sub-menu li > a > span {
+    /*  color: #797979;
+      text-shadow: 1px 1px 0px rgba(255, 255, 255, .2);
+      background: transparent;
+      border: 1px solid #c9c9c9;
+
+      -webkit-box-shadow: none;
+      -moz-box-shadow: none;
+      box-shadow: none;
+    border:1px solid #fff;
+    background:red;
+    text-shadow: 1px 1px 0px rgba(255, 255, 255, .2);
+    border-radius:15px;padding: 0 5px;*/
+}
+.imcontainer .accordion .sub-menu li > a strong{
+    font-weight:normal;
+    margin-left:5px;
+}
+.imcontainer .accordion .sub-menu li > a strong.uname{ color:#009}
+
+.imcontainer .accordion .sub-menu em {
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-left: 6px;
+    color: #a6a6a6;
+    font: normal 10px/32px Arial, sans-serif;
+}
+
+.imcontainer .accordion .sub-menu em img {
+    border-radius: 14px;
+    box-shadow: 0 0 6px hsla(0, 27%, 42%, .5);
+    width: 26px;
+    margin-top: 3px;
+    height: 26px;
+}
+
+/* Functionality */
+
+.imcontainer .accordion li > .sub-menu {
+    display: none;
+}
+
+.imcontainer .accordion li:target > .sub-menu {
+    display: block;
+}
+
+.userheader li {
+    float: left;
+}
+
+.userheader label {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    bottom: 6px;
+    right: 6px;
+    background: url(im/online.png);
+}
+
+.userheader li.icon {
+    width: 80px;
+    position: relative
+}
+
+.userheader li.headerright strong {
+    font-size: 16px;
+    font-weight: bold;
+    color:rgba(0,0,0,.8); ;
+    text-shadow:2px 2px 1px rgba(255,255,255,.6);
+}
+
+.userheader li.headerright p.shuoshuo {
+    font-size: 12px;
+    width: 160px;
+    border: 1px solid rgba(255,255,255,.6);
+    padding: 6px;
+    3px 6px 3px;
+    border-radius: 8px;
+    margin: 5px 0 0 5px;
+    word-break: break-all;
+}
+
+.userheader li.headerright strong {
+    margin-left: 6px;
+}
+
+.userheader img {
+    background: rgba(255, 255, 255, .6);
+    padding: 5px;
+    height: 70px;
+    width: 70px;
+    border-radius: 70px;
+    box-shadow: 0 0 6px hsla(0, 27%, 42%, .5);
+}
+
+.imnavbar {
+    height: 30px;
+    margin: 0 0 5px 0;
+}
+
+.imnavbar ul li {
+    min-width: 70px;
+    max-width: 100px;
+    height: 28px;
+    float: left;
+    /*border-right:1px solid #03F;*/
+    text-align: center;
+}
+
+.imnavbar ul li a {
+    display: block;
+}
+
+/*.imcontainer .imnavbar li a.usergroup{*/
+/*background:url(icons/user1.png) center no-repeat;*/
+/*}*/
+/*.imcontainer .imnavbar li a.group{*/
+/*background:url(icons/user_group.png) center no-repeat;*/
+/*}*/
+/*.imcontainer .imnavbar li a.contact{*/
+/*background:url(icons/send.png) center no-repeat;*/
+/*}*/
+
+.imnotice{
+    background: red;
+    position: absolute;
+    min-width: 20px;
+    height: 18px;
+    border: 2px #fff solid;
+    border-radius: 10px;
+    text-align: center;
+    color: #fff;
+    font-size: 12px;
+    z-index: 999;
+    top: -3px;
+    left: 8px;
+}
+.listnotice{
+    position: absolute;
+    top: 5px;
+    right: 60px;
+    border: 1px solid #fff;
+    border-radius: 15px;
+    height: 20px;
+    padding: 0 5px;
+    background: red;
+    color: white;
+    float: right;
+    line-height: 20px;
+}
+
+/* onlu suport  > = chrome 19*/
+.offline {
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: grayscale(100%);
+
+    filter: gray;
+}

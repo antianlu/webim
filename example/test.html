@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <!--<script type="text/javascript" src="/js/jquery-1.9.1.min.js"></script>-->
+    <link href="/css/register.css" type="text/css" rel="stylesheet">
+    <script type="text/javascript">
+        var username = 'test';
+        var socket = io.connect('http://localhost');
+
+        socket.on('connect', function () {
+            socket.emit('enter', {id: '000001', name: username});
+        });
+
+        socket.on('news', function (data) {
+            console.log(data);
+            socket.emit('my other event', { my: 'data' });
+        });
+
+        socket.on('private', function (data) {
+
+        });
+
+        socket.on('group', function (data) {
+
+        });
+
+        socket.on('online_notice', function (data) {
+
+        });
+
+        //        $(function(){
+        //            $('#single-send').click(function(){
+        //                console.log('send private');
+        //                var userid = $('#userid').val();
+        //                var txt = $('#single-text').val();
+        //              socket.emit('private',{id : userid ,msg:txt});
+        //            })
+        //
+        //            $('#group-send').click(function(){
+        //                console.log('send group');
+        //                var ids = $('#groups').val().split(',');
+        //                console.log(ids);
+        //                socket.emit('group',{id :ids,msg:$('#single-text').val()});
+        //            })
+        //        })
+        function single()
+        {
+            //$('#single-send').click(function(){
+            console.log('send private');
+            // var userid = $('#userid').val();
+            // var txt = $('#single-text').val();
+            socket.emit('private',{id : '001' ,msg:'text'});
+            //})
+        }
+    </script>
+
+    <style>
+        .box{
+            height: 230px;
+            width: 600px;
+            margin: 10px 0 0 50px;
+            border-bottom: 1px #cc0000 solid;
+        }
+        .box .show-text{
+            margin: 10px;
+            overflow: hidden;
+        }
+        .box .show-text ul{
+            height: 120px;
+            width: auto;
+        }
+        .box .show-text li{
+            line-height: 20px;
+            margin: 5px 0 0 0;
+        }
+        .box .send {
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+<div class="box">
+    userid : <input id="userid" value="001" type="text">
+    <div class="show-text">
+        <ul>
+            <li>ff</li>
+        </ul>
+    </div>
+    <div class="send">
+        <textarea id="single-text">发送内容</textarea>
+        <input type="button" id="single-send" onclick="single();" value="send">
+    </div>
+
+</div>
+<div class="box">
+    group user id : <input id="groups" value="001,002" type="text">
+    <div class="show-text">
+        <ul>
+            <li>aa</li>
+            <li>dd</li>
+        </ul>
+    </div>
+    <div class="send">
+        <textarea id="group-text">发送内容</textarea>
+        <input type="button" id="group-send" value="send">
+    </div>
+</div>
+</body>
+</html>

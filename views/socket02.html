@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <script type="text/javascript" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript">
+        var username = 'test';
+        var socket =  io.connect('localhost', {port: 3000});//io.connect('http://localhost/');
+        //            socket.on('public',function(data){
+        //                console.log(data);
+        //                socket.emit('my other event',{my : 'data'});
+        //            });
+        //socket.emit('my other event', { my: 'data' });
+        socket.on('news', function (data) {
+            console.log(data);
+            //socket.emit('my other event', { my: 'data' });
+        });
+        socket.on('connect',function(){
+            console.log('connected');
+            socket.emit('enter', {id: '000001', name: username});
+        });
+        socket.on('private',function(data){
+
+        });
+
+    </script>
+</head>
+<body>
+socket test2
+</body>
+</html>

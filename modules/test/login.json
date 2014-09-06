@@ -1,0 +1,11 @@
+{
+    "username": "test",
+    "password": "test"
+}
+
+// client storage login info ,use local stroage
+// {
+//    "username":"test"
+//    "icon":"",
+//    "autologin":!1
+//}
